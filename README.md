@@ -1,4 +1,6 @@
-# Tournament
+[![CircleCI](https://circleci.com/gh/Soleksandr/Championship.svg?style=svg)](https://circleci.com/gh/Soleksandr/Championship)
+
+# Championship
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.0.
 
