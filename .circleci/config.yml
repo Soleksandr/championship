@@ -48,18 +48,18 @@ jobs:
         name: End-to-end tests
         command: npm run e2e
 
-  workflows:
-    version: 2
-    Main:
-      jobs:
-        - build
-        - linter:
-            requires:
-              - build
-        - unit-test:
-            requires:
-              - build
-        - e2e-test:
-            requires:
-              - build
+workflows:
+  version: 2
+  Main:
+    jobs:
+      - build
+      - linter:
+          requires:
+            - build
+      - unit-test:
+          requires:
+            - build
+      - e2e-test:
+          requires:
+            - build
 
