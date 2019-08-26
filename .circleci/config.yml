@@ -33,5 +33,36 @@ jobs:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
 
-      # run tests!
-      - run: npm run lint
+  linter:
+    steps:
+      - run:
+          name: Linter
+          command: npm run lint
+
+  unit-test:
+    steps:
+      -run:
+        name: Unit tests
+        command: npm run test
+
+  e2e-test:
+    steps:
+      -run:
+        name: End-to-end tests
+        command: npm run e2e
+
+  workflows:
+    version: 2
+    Main:
+      jobs:
+        - build
+        - linter:
+            requires:
+              - build
+        - unit-test:
+            requires:
+              - build
+        - e2e-test:
+            requires:
+              - build
+
