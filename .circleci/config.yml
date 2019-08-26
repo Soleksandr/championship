@@ -27,21 +27,21 @@ jobs:
     - image: circleci/node:10.16
     steps:
       - run:
-          name: Linter
+          name: "Linter"
           command: npm run lint
   unit-test:
     docker:
       - image: circleci/node:10.16
     steps:
       - run:
-        name: Unit tests
+        name: "Unit tests"
         command: npm run test
   e2e-test:
     docker:
     - image: circleci/node:10.16
     steps:
       - run:
-        name: End-to-end tests
+        name: "End-to-end tests"
         command: npm run e2e
 
 workflows:
