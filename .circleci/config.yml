@@ -32,22 +32,19 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
   linter:
     steps:
       - run:
           name: Linter
           command: npm run lint
-
   unit-test:
     steps:
-      -run:
+      - run:
         name: Unit tests
         command: npm run test
-
   e2e-test:
     steps:
-      -run:
+      - run:
         name: End-to-end tests
         command: npm run e2e
 
