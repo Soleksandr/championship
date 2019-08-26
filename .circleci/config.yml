@@ -4,7 +4,7 @@
 #
 version: 2
 jobs:
-  build:
+  build-and-test:
     docker:
       - image: circleci/node:10.16
     working_directory: ~/repo
@@ -21,41 +21,12 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
-  linter:
-    docker:
-    - image: circleci/node:10.16
-    steps:
       - run:
           name: "Linter"
           command: npm run lint
-  unit-test:
-    docker:
-      - image: circleci/node:10.16
-    steps:
       - run:
-        name: "Unit tests"
-        command: npm run test
-  e2e-test:
-    docker:
-    - image: circleci/node:10.16
-    steps:
+          name: "Unit tests"
+          command: npm run test
       - run:
-        name: "End-to-end tests"
-        command: npm run e2e
-
-workflows:
-  version: 2
-  Main:
-    jobs:
-      - build
-      - linter:
-          requires:
-            - build
-      - unit-test:
-          requires:
-            - build
-      - e2e-test:
-          requires:
-            - build
-
+          name: "End-to-end tests"
+          command: npm run e2e
