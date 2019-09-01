@@ -10,7 +10,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatInputModule } from '@angular/material/input'
 import { SignUpComponent } from './forms/sign-up/sign-up.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -23,12 +25,14 @@ import { SignUpComponent } from './forms/sign-up/sign-up.component';
   imports: [
     AppRoutingModule,
     BrowserModule,
+    FormsModule,
     BrowserAnimationsModule,
     MatButtonModule,
     MatMenuModule,
     MatIconModule,
     MatTabsModule,
     MatToolbarModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]

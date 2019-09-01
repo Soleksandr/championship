@@ -1,1 +1,15 @@
-<p>sign-up works!</p>
+<form class="example-form" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <input [(ngModel)]="user.email" matInput placeholder="Email" value="Sushi" name="email">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input [(ngModel)]="user.password" matInput placeholder="Password" name="password">
+    </mat-form-field>
+
+    <mat-form-field>
+      <input [(ngModel)]="user.confirmPassword" matInput placeholder="Confirm Password" name="confirmPassword">
+    </mat-form-field>
+
+    <button type="submit" mat-flat-button	color="primary">Sign Up</button>
+  </form>
