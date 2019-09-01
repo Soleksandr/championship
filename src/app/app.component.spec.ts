@@ -1,7 +1,7 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { SignUpComponent } from './forms/sign-up/sign-up.component'
+import { SignUpComponent } from './forms/sign-up/sign-up.component';
 import { AppRoutingModule } from './app-routing.module';
 
 import { MatButtonModule } from '@angular/material/button';
