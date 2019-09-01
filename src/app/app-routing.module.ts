@@ -1,10 +1,10 @@
-import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import { SignUpComponent } from "./forms/sign-up/sign-up.component";
+import { SignUpComponent } from './forms/sign-up/sign-up.component';
 
 const routes: Routes = [
-  { path: "sign_up", component: SignUpComponent }
+  { path: 'sign_up', component: SignUpComponent }
 ];
 
 @NgModule({
