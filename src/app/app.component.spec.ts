@@ -1,14 +1,24 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { SignUpComponent } from './forms/sign-up/sign-up.component'
+import { AppRoutingModule } from './app-routing.module';
+
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
-        HomeComponent
+        HomeComponent,
+        SignUpComponent
       ],
+      imports: [AppRoutingModule, MatMenuModule, MatIconModule, MatButtonModule, MatTabsModule, MatToolbarModule]
     }).compileComponents();
   }));
 
