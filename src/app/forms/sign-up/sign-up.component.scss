@@ -7,4 +7,12 @@ form {
   left: 50%;
   transform: translate(-50%, -50%);
   margin: 0 auto;
+
+  mat-hint {
+    color: red;
+  }
+
+  button {
+    margin-top: 17px;
+  }
 }
