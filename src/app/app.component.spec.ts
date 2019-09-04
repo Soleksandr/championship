@@ -9,6 +9,9 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserModule } from '@angular/platform-browser'
+import { FormsModule } from '@angular/forms'
+import { MatInputModule } from '@angular/material/input';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -18,7 +21,17 @@ describe('AppComponent', () => {
         HomeComponent,
         SignUpComponent
       ],
-      imports: [AppRoutingModule, MatMenuModule, MatIconModule, MatButtonModule, MatTabsModule, MatToolbarModule]
+      imports: [
+        BrowserModule,
+        FormsModule,
+        AppRoutingModule,
+        MatMenuModule,
+        MatIconModule,
+        MatButtonModule,
+        MatTabsModule,
+        MatToolbarModule,
+        MatInputModule
+      ]
     }).compileComponents();
   }));
 
