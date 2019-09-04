@@ -18,13 +18,13 @@ export class SignUpComponent implements OnInit {
 
   onConfirmPassFocus() {
     if (this.confirmPassError) {
-      this.confirmPassError = ""
+      this.confirmPassError = '';
     }
   }
 
   onConfirmPassBlur() {
     if (!this.user.confirmPassword) {
-      this.confirmPassError = 'Required'
+      this.confirmPassError = 'Required';
     } else if (this.user.password !== this.user.confirmPassword) {
       this.confirmPassError = 'Confirm password must be the same as password';
     }
@@ -34,12 +34,12 @@ export class SignUpComponent implements OnInit {
     if (this.user.confirmPassword && this.user.password !== this.user.confirmPassword) {
       this.confirmPassError = 'Confirm password must be the same as password';
     } else {
-      this.confirmPassError = ''
+      this.confirmPassError = '';
     }
   }
 
   onSubmit() {
-    console.log(this.user)
+    console.log(this.user);
   }
 
   constructor() { }

@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By, BrowserModule } from '@angular/platform-browser'
+import { By, BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { SignUpComponent } from './sign-up.component';
@@ -44,12 +44,12 @@ describe('SignUpComponent', () => {
   });
 
   it('should have proper header', () => {
-    const h1 = fixture.debugElement.query(By.css('h1')).nativeElement
+    const h1 = fixture.debugElement.query(By.css('h1')).nativeElement;
     expect(h1.textContent).toContain('Sign Up');
   });
 
   it('should have proper header', () => {
-    const h1 = fixture.debugElement.query(By.css('h1')).nativeElement
+    const h1 = fixture.debugElement.query(By.css('h1')).nativeElement;
     expect(h1.textContent).toContain('Sign Up');
   });
 });
