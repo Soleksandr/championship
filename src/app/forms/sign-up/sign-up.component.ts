@@ -16,8 +16,11 @@ export class SignUpComponent implements OnInit {
 
   confirmPassError = '';
 
-  onConfirmPassFocus() {
-    if (this.confirmPassError) {
+  onConfirmPassInput() {
+    console.log('====');
+    if (!this.user.confirmPassword) {
+      this.confirmPassError = 'Required';
+    } else {
       this.confirmPassError = '';
     }
   }
@@ -33,8 +36,6 @@ export class SignUpComponent implements OnInit {
   onPassBlur() {
     if (this.user.confirmPassword && this.user.password !== this.user.confirmPassword) {
       this.confirmPassError = 'Confirm password must be the same as password';
-    } else {
-      this.confirmPassError = '';
     }
   }
 

@@ -19,7 +19,7 @@
         #confirmPassword=ngModel
         placeholder="Confirm Password"
         [(ngModel)]="user.confirmPassword"
-        (focus)="onConfirmPassFocus()"
+        (input)="onConfirmPassInput()"
         (blur)="onConfirmPassBlur()"
       >
       <mat-hint align="end" [hidden]="!confirmPassError">{{confirmPassError || Required}}</mat-hint>
