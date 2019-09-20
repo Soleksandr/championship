@@ -1,13 +1,13 @@
 <form #signUpForm=ngForm class="example-form" (ngSubmit)="onSubmit()">
     <h1 class="mat-headline">Sign Up</h1>
     <mat-form-field>
-      <input type="email" #email=ngModel [(ngModel)]="user.email" matInput placeholder="Email" value="Sushi" name="email" required>
-      <mat-hint align="end" [hidden]="email.valid || email.untouched">Required</mat-hint>
+      <input type="email" #email=ngModel [(ngModel)]="user.email" matInput placeholder="Email" name="email" required>
+      <mat-hint id="email-validate" align="end" [hidden]="email.valid || email.untouched">Required</mat-hint>
     </mat-form-field>
 
     <mat-form-field>
       <input (blur)="onPassBlur()" type="password" #password=ngModel [(ngModel)]="user.password" matInput placeholder="Password" name="password" required>
-      <mat-hint align="end" [hidden]="password.valid || password.untouched">Required</mat-hint>
+      <mat-hint id="password-validate" align="end" [hidden]="password.valid || password.untouched">Required</mat-hint>
     </mat-form-field>
 
     <mat-form-field>
@@ -22,7 +22,7 @@
         (input)="onConfirmPassInput()"
         (blur)="onConfirmPassBlur()"
       >
-      <mat-hint align="end" [hidden]="!confirmPassError">{{confirmPassError || Required}}</mat-hint>
+      <mat-hint id="confirm_password-validate" align="end" [hidden]="!confirmPassError">{{confirmPassError || Required}}</mat-hint>
     </mat-form-field>
 
     <button [disabled]="!signUpForm.form.valid" type="submit" mat-flat-button	color="primary">submit</button>
