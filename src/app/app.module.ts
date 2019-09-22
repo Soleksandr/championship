@@ -13,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { SignUpComponent } from './forms/sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -32,7 +33,8 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatTabsModule,
     MatToolbarModule,
-    MatInputModule
+    MatInputModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
