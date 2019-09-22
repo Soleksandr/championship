@@ -10,7 +10,7 @@ const app = new Koa();
 app.env = NODE_ENV;
 
 app.use(async ctx => {
-  ctx.body = 'Koa is running';
+  ctx.body = { isServerRunning: true };
 });
 
 app.on('error', (err) => {
