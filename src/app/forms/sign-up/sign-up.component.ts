@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { User } from '../../types/User';
+import { UserService } from '../../services/store/user/user.service';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,6 +9,11 @@ import { User } from '../../types/User';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
+
+  constructor(
+    private userService: UserService
+  ) { }
+
   user: User = {
     email: '',
     password: '',
@@ -17,7 +23,6 @@ export class SignUpComponent implements OnInit {
   confirmPassError = '';
 
   onConfirmPassInput() {
-    console.log('====');
     if (!this.user.confirmPassword) {
       this.confirmPassError = 'Required';
     } else {
@@ -40,10 +45,8 @@ export class SignUpComponent implements OnInit {
   }
 
   onSubmit() {
-    console.log(this.user);
+    this.userService.createUser(this.user);
   }
-
-  constructor() { }
 
   ngOnInit() {
   }

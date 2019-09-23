@@ -9,14 +9,17 @@ import { Observable } from 'rxjs';
 })
 export class HttpRequestService {
 
-  private baseUrl: string = environment.baseUrl;
+  private baseUrl = `${environment.baseUrl}/api`;
 
   constructor(
     private http: HttpClient
   ) { }
 
   get<T>(url: string): Observable<T> {
-    return this.http.get<T>(this.baseUrl + url);
+    return this.http.get<T>(`${this.baseUrl}${url}`);
   }
 
+  post<T>(url: string, body: any): Observable<T> {
+    return this.http.post<T>(`${this.baseUrl}${url}`, body);
+  }
 }
