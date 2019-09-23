@@ -10,6 +10,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { FormsModule } from '@angular/forms';
+import { UserService } from '../../services/store/user/user.service';
 
 describe('SignUpComponent', () => {
   let component: SignUpComponent;
@@ -27,8 +28,9 @@ describe('SignUpComponent', () => {
         MatButtonModule,
         MatTabsModule,
         MatToolbarModule,
-        MatInputModule
+        MatInputModule,
       ],
+      providers: [ { provide: UserService } ]
     })
     .compileComponents();
   }));
