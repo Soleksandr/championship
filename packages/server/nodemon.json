@@ -1,21 +1,17 @@
 {
   "restartable": "rs",
-  "ignore": [
-    ".git",
-    "node_modules/**/node_modules"
-  ],
   "delay": "300",
   "verbose": true,
   "execMap": {
     "js": "node --harmony"
   },
   "watch": [
-    "./src/server/**/*",
+    "./**/*",
     ".env"
   ],
   "env": {
     "NODE_ENV": "development"
   },
   "ext": "ts,tsx",
-  "exec": "ts-node -r dotenv/config --project ./src/server/tsconfig.json ./src/server/index.ts"
+  "exec": "ts-node -r dotenv/config  ./src/index.ts"
 }
