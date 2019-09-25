@@ -1,4 +1,7 @@
 import Koa from 'koa';
+import Router from 'koa-router';
+
+const router = new Router();
 
 const {
   PORT = 4444,
