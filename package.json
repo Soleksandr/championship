@@ -1,14 +1,22 @@
 {
-  "name": "tournament",
+  "name": "championship",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "lerna run start --scope championship-server",
+    "dev": "lerna run dev --parallel",
+    "build": "lerna run build",
+    "test": "lerna run test",
+    "test:ci": "lerna run test:ci",
+    "lint": "lerna run lint",
+    "e2e": "lerna run e2e --scope championship-client",
+    "e2e:ci": "lerna run e2e --scope championship-client -- --protractor-config=e2e/protractor-ci.conf.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lerna": "^3.16.4"
+    "lerna": "^3.16.4",
+    "typescript": "~3.5.3"
   }
 }
