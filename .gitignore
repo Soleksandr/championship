@@ -36,6 +36,7 @@ packages/client/speed-measure-plugin*.json
 /coverage
 /libpeerconnection.log
 npm-debug.log
+lerna-debug.log
 yarn-error.log
 testem.log
 /typings
