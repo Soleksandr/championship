@@ -5,13 +5,10 @@ import { User } from '../../../types/User';
 import { HttpRequestService } from '../../http-request/http-request.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-
-  constructor(
-    private http: HttpRequestService
-  ) { }
+  constructor(private http: HttpRequestService) {}
 
   private readonly user = new BehaviorSubject<User>(null);
 

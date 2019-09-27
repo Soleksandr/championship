@@ -8,7 +8,6 @@
     "build": "ng build",
     "test": "ng test --code-coverage",
     "test:ci": "ng test --watch=false",
-    "lint": "ng lint  --tslintConfig=../../tslint.json",
     "e2e": "ng e2e",
     "e2e:ci": "ng e2e -- --protractor-config=e2e/protractor-ci.conf.js"
   },
@@ -32,7 +31,6 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.0",
     "@angular/cli": "~8.3.0",
-    "@angular/compiler-cli": "~8.2.3",
     "@angular/language-service": "~8.2.3",
     "@types/jasmine": "~3.3.8",
     "@types/jasminewd2": "~2.0.3",
@@ -44,7 +42,6 @@
     "karma-coverage-istanbul-reporter": "~2.0.1",
     "karma-jasmine": "~2.0.1",
     "karma-jasmine-html-reporter": "^1.4.0",
-    "protractor": "~5.4.0",
-    "tslint": "~5.15.0"
+    "protractor": "~5.4.0"
   }
 }

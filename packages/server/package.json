@@ -6,8 +6,7 @@
     "dev": "nodemon",
     "build": "tsc",
     "test": "echo ---- server part is not implemented yet -----",
-    "test:ci": "echo ---- server part is not implemented yet -----",
-    "lint": "echo ---- server part is not implemented yet -----"
+    "test:ci": "echo ---- server part is not implemented yet -----"
   },
   "dependencies": {
     "koa": "^2.8.1",

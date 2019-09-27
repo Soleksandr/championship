@@ -18,7 +18,7 @@ describe('SignUpComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SignUpComponent ],
+      declarations: [SignUpComponent],
       imports: [
         BrowserModule,
         FormsModule,
@@ -30,9 +30,8 @@ describe('SignUpComponent', () => {
         MatToolbarModule,
         MatInputModule,
       ],
-      providers: [ { provide: UserService } ]
-    })
-    .compileComponents();
+      providers: [{ provide: UserService }],
+    }).compileComponents();
   }));
 
   beforeEach(async(() => {
@@ -100,8 +99,9 @@ describe('SignUpComponent', () => {
 
     fixture.detectChanges();
 
-    expect(fixture.debugElement.query(By.css('#confirm_password-validate')).nativeElement.innerText)
-      .toEqual('Confirm password must be the same as password');
+    expect(fixture.debugElement.query(By.css('#confirm_password-validate')).nativeElement.innerText).toEqual(
+      'Confirm password must be the same as password',
+    );
   }));
 });
 

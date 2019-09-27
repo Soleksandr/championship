@@ -15,14 +15,8 @@ import { SignUpComponent } from './forms/sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-
-
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    SignUpComponent
-  ],
+  declarations: [AppComponent, HomeComponent, SignUpComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -34,9 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatTabsModule,
     MatToolbarModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

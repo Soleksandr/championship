@@ -1,12 +1,9 @@
 import Koa from 'koa';
-import Router from 'koa-router';
+// import Router from 'koa-router';
 
-const router = new Router();
+// const router = new Router();
 
-const {
-  PORT = 4444,
-  NODE_ENV = 'development'
-} = process.env;
+const { PORT = 4444, NODE_ENV = 'development' } = process.env;
 
 const app = new Koa();
 
@@ -16,7 +13,7 @@ app.use(async ctx => {
   ctx.body = { isServerRunning: true };
 });
 
-app.on('error', (err) => {
+app.on('error', err => {
   console.error('- Error - ', err);
 });
 

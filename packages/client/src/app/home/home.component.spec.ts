@@ -13,10 +13,9 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HomeComponent ],
-      imports: [MatMenuModule, MatIconModule, MatButtonModule, MatTabsModule, MatToolbarModule]
-    })
-    .compileComponents();
+      declarations: [HomeComponent],
+      imports: [MatMenuModule, MatIconModule, MatButtonModule, MatTabsModule, MatToolbarModule],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

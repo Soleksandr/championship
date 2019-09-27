@@ -9,16 +9,28 @@
     "build": "lerna run build",
     "test": "lerna run test --parallel",
     "test:ci": "lerna run test:ci",
-    "lint": "lerna run lint",
+    "lint": "eslint '*/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "e2e": "lerna run e2e --scope championship-client",
     "e2e:ci": "lerna run e2e --scope championship-client -- --protractor-config=e2e/protractor-ci.conf.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.5",
     "lerna": "^3.16.4",
-    "typescript": "~3.5.3",
+    "prettier": "^1.18.2",
     "ts-node": "^7.0.1",
-    "codelyzer": "^5.0.0"
+    "typescript": "~3.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   }
 }

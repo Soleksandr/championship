@@ -16,11 +16,7 @@ import { MatInputModule } from '@angular/material/input';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [
-        AppComponent,
-        HomeComponent,
-        SignUpComponent
-      ],
+      declarations: [AppComponent, HomeComponent, SignUpComponent],
       imports: [
         BrowserModule,
         FormsModule,
@@ -30,8 +26,8 @@ describe('AppComponent', () => {
         MatButtonModule,
         MatTabsModule,
         MatToolbarModule,
-        MatInputModule
-      ]
+        MatInputModule,
+      ],
     }).compileComponents();
   }));
 
