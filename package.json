@@ -7,7 +7,7 @@
     "start": "lerna run start --scope championship-server",
     "dev": "lerna run dev --parallel",
     "build": "lerna run build",
-    "test": "lerna run test",
+    "test": "lerna run test --parallel",
     "test:ci": "lerna run test:ci",
     "lint": "lerna run lint",
     "e2e": "lerna run e2e --scope championship-client",
@@ -17,6 +17,8 @@
   "license": "ISC",
   "devDependencies": {
     "lerna": "^3.16.4",
-    "typescript": "~3.5.3"
+    "typescript": "~3.5.3",
+    "ts-node": "^7.0.1",
+    "codelyzer": "^5.0.0"
   }
 }

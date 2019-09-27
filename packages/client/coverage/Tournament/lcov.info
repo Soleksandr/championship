@@ -1,5 +1,5 @@
 TN:
-SF:/home/oleks/_projects_/Tournament/src/polyfills.ts
+SF:/home/oleks/_projects_/championship_/packages/client/src/polyfills.ts
 FNF:0
 FNH:0
 LF:0
@@ -8,7 +8,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/oleks/_projects_/Tournament/src/test.ts
+SF:/home/oleks/_projects_/championship_/packages/client/src/test.ts
 FNF:0
 FNH:0
 DA:13,1
@@ -20,7 +20,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/oleks/_projects_/Tournament/src/app/app-routing.module.ts
+SF:/home/oleks/_projects_/championship_/packages/client/src/app/app-routing.module.ts
 FNF:0
 FNH:0
 DA:6,1
@@ -31,7 +31,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/oleks/_projects_/Tournament/src/app/app.component.ts
+SF:/home/oleks/_projects_/championship_/packages/client/src/app/app.component.ts
 FN:3,(anonymous_0)
 FNF:1
 FNH:1
@@ -44,7 +44,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/oleks/_projects_/Tournament/src/app/forms/sign-up/sign-up.component.ts
+SF:/home/oleks/_projects_/championship_/packages/client/src/app/forms/sign-up/sign-up.component.ts
 FN:13,(anonymous_0)
 FN:25,(anonymous_1)
 FN:33,(anonymous_2)
@@ -89,7 +89,7 @@ BRF:10
 BRH:6
 end_of_record
 TN:
-SF:/home/oleks/_projects_/Tournament/src/app/home/home.component.ts
+SF:/home/oleks/_projects_/championship_/packages/client/src/app/home/home.component.ts
 FN:10,(anonymous_0)
 FN:12,(anonymous_1)
 FNF:2
@@ -103,7 +103,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/oleks/_projects_/Tournament/src/app/services/http-request/http-request.service.ts
+SF:/home/oleks/_projects_/championship_/packages/client/src/app/services/http-request/http-request.service.ts
 FN:14,(anonymous_0)
 FN:18,(anonymous_1)
 FN:22,(anonymous_2)
@@ -123,7 +123,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/oleks/_projects_/Tournament/src/app/services/store/user/user.service.ts
+SF:/home/oleks/_projects_/championship_/packages/client/src/app/services/store/user/user.service.ts
 FN:12,(anonymous_0)
 FN:20,(anonymous_1)
 FN:24,(anonymous_2)
@@ -147,7 +147,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/oleks/_projects_/Tournament/src/environments/environment.ts
+SF:/home/oleks/_projects_/championship_/packages/client/src/environments/environment.ts
 FNF:0
 FNH:0
 DA:5,1
