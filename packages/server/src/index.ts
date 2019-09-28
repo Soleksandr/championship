@@ -1,7 +1,7 @@
 import Koa from 'koa';
-// import Router from 'koa-router';
+import bodyParser from 'koa-bodyparser';
 
-// const router = new Router();
+import router from './middlewares/routes';
 
 const { PORT = 4444, NODE_ENV = 'development' } = process.env;
 
@@ -9,9 +9,8 @@ const app = new Koa();
 
 app.env = NODE_ENV;
 
-app.use(async ctx => {
-  ctx.body = { isServerRunning: true };
-});
+app.use(bodyParser());
+app.use(router.routes());
 
 app.on('error', err => {
   console.error('- Error - ', err);

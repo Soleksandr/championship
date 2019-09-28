@@ -23,6 +23,6 @@ export class UserService {
   }
 
   public createUser(userData: User) {
-    this.http.post<User>('/user', userData).subscribe(this.setNewUser);
+    this.http.post<User>('/users', userData).subscribe(this.setNewUser);
   }
 }
