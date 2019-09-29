@@ -1,5 +1,7 @@
 import Router from 'koa-router';
 
+import { userManager } from '../../managers';
+
 const router = new Router({ prefix: '/users' });
 
 router
@@ -8,8 +10,10 @@ router
   })
 
   .post('/', async ctx => {
-    console.log(ctx.request.body);
-    ctx.body = ctx.request.body;
+    ctx.user;
+    const email = await userManager.create(ctx.request.body);
+
+    ctx.body = { email };
   });
 
 export default router;
