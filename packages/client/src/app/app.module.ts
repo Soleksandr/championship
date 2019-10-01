@@ -14,9 +14,10 @@ import { MatInputModule } from '@angular/material/input';
 import { SignUpComponent } from './forms/sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SignUpComponent],
+  declarations: [AppComponent, HomeComponent, SignUpComponent, PageNotFoundComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,

@@ -17,7 +17,7 @@ export class User {
   @Property({ onUpdate: () => new Date() })
   updatedAt = new Date();
 
-  @Property()
+  @Property({ unique: true })
   email: string;
 
   @Property()

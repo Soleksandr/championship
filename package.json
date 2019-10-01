@@ -6,7 +6,7 @@
   "scripts": {
     "start": "lerna run start --scope championship-server",
     "dev": "lerna run dev --parallel",
-    "build": "lerna run build",
+    "build": "rimraf dist/* && lerna run build",
     "test": "lerna run test --parallel",
     "test:ci": "lerna run test:ci",
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
@@ -32,5 +32,8 @@
     "hooks": {
       "pre-commit": "npm run lint"
     }
+  },
+  "dependencies": {
+    "rimraf": "^3.0.0"
   }
 }
