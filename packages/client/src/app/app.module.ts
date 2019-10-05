@@ -15,9 +15,10 @@ import { SignUpComponent } from './forms/sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SignUpComponent, PageNotFoundComponent],
+  declarations: [AppComponent, HomeComponent, SignUpComponent, PageNotFoundComponent, HeaderComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,

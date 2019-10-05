@@ -3,6 +3,8 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './forms/sign-up/sign-up.component';
 import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HeaderComponent } from './header/header.component';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
@@ -16,7 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [AppComponent, HomeComponent, SignUpComponent],
+      declarations: [AppComponent, HomeComponent, SignUpComponent, PageNotFoundComponent, HeaderComponent],
       imports: [
         BrowserModule,
         FormsModule,
