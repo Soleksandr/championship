@@ -1,0 +1,17 @@
+{
+  "restartable": "rs",
+  "delay": "300",
+  "verbose": true,
+  "execMap": {
+    "js": "node --harmony"
+  },
+  "watch": [
+    "./**/*",
+    ".env"
+  ],
+  "env": {
+    "NODE_ENV": "development"
+  },
+  "ext": "ts,tsx",
+  "exec": "ts-node -r dotenv/config  ./src/index.ts"
+}

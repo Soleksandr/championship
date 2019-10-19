@@ -2,20 +2,19 @@
 
 # compiled output
 /dist
-/tmp
-/out-tsc
+packages/client/tmp
+packages/client/out-tsc
 # Only exists if Bazel was run
-/bazel-out
+packages/client/bazel-out
 
 # dependencies
-/node_modules
+**/node_modules
 
 # profiling files
-chrome-profiler-events*.json
-speed-measure-plugin*.json
+packages/client/chrome-profiler-events*.json
+packages/client/speed-measure-plugin*.json
 
 # IDEs and editors
-/.idea
 .project
 .classpath
 .c9/
@@ -32,15 +31,21 @@ speed-measure-plugin*.json
 .history/*
 
 # misc
-/.sass-cache
-/connect.lock
-/coverage
-/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
+**/.sass-cache
+**/connect.lock
+**/coverage
+**/libpeerconnection.log
+**/npm-debug.log
+**/lerna-debug.log
+**/testem.log
 /typings
 
 # System Files
 .DS_Store
 Thumbs.db
+
+# Env variables
+.env
+
+# Server
+packages/server/temp

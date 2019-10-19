@@ -1,47 +1,39 @@
 {
-  "name": "tournament",
-  "version": "0.0.0",
+  "name": "championship",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
-    "e2e": "ng e2e"
+    "start": "lerna run start --scope championship-server",
+    "dev": "lerna run dev --parallel",
+    "build": "rimraf dist/* && lerna run build",
+    "test": "lerna run test --parallel",
+    "test:ci": "lerna run test:ci",
+    "lint": "eslint '*/**/*.{js,ts,tsx}'",
+    "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
+    "e2e": "lerna run e2e --scope championship-client",
+    "e2e:ci": "lerna run e2e --scope championship-client -- --protractor-config=e2e/protractor-ci.conf.js"
   },
-  "private": true,
-  "dependencies": {
-    "@angular/animations": "~8.2.3",
-    "@angular/common": "~8.2.3",
-    "@angular/compiler": "~8.2.3",
-    "@angular/core": "~8.2.3",
-    "@angular/forms": "~8.2.3",
-    "@angular/platform-browser": "~8.2.3",
-    "@angular/platform-browser-dynamic": "~8.2.3",
-    "@angular/router": "~8.2.3",
-    "rxjs": "~6.4.0",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
-  },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.803.0",
-    "@angular/cli": "~8.3.0",
-    "@angular/compiler-cli": "~8.2.3",
-    "@angular/language-service": "~8.2.3",
-    "@types/node": "~8.9.4",
-    "@types/jasmine": "~3.3.8",
-    "@types/jasminewd2": "~2.0.3",
-    "codelyzer": "^5.0.0",
-    "jasmine-core": "~3.4.0",
-    "jasmine-spec-reporter": "~4.2.1",
-    "karma": "~4.1.0",
-    "karma-chrome-launcher": "~2.2.0",
-    "karma-coverage-istanbul-reporter": "~2.0.1",
-    "karma-jasmine": "~2.0.1",
-    "karma-jasmine-html-reporter": "^1.4.0",
-    "protractor": "~5.4.0",
-    "ts-node": "~7.0.0",
-    "tslint": "~5.15.0",
+    "@typescript-eslint/eslint-plugin": "^2.3.1",
+    "@typescript-eslint/parser": "^2.3.1",
+    "eslint": "^6.4.0",
+    "eslint-config-prettier": "^6.3.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.5",
+    "lerna": "^3.16.4",
+    "prettier": "^1.18.2",
+    "ts-node": "^7.0.1",
     "typescript": "~3.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "dependencies": {
+    "rimraf": "^3.0.0"
   }
 }
