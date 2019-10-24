@@ -12,13 +12,16 @@
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "e2e": "lerna run e2e --scope championship-client",
-    "e2e:ci": "lerna run e2e --scope championship-client -- --protractor-config=e2e/protractor-ci.conf.js"
+    "e2e:ci": "lerna run e2e --scope championship-client -- --protractor-config=e2e/protractor-ci.conf.js",
+    "postinstall": "lerna bootstrap"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/bcrypt": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^2.3.1",
     "@typescript-eslint/parser": "^2.3.1",
+    "copyfiles": "^2.1.1",
     "eslint": "^6.4.0",
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",

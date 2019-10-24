@@ -49,3 +49,6 @@ Thumbs.db
 
 # Server
 packages/server/temp
+
+# Common
+packages/common/dist
