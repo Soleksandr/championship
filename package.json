@@ -25,7 +25,6 @@
     "eslint-config-prettier": "^6.3.0",
     "eslint-plugin-prettier": "^3.1.1",
     "husky": "^3.0.9",
-    "lerna": "^3.16.4",
     "prettier": "^1.18.2",
     "ts-node": "^7.0.1",
     "typescript": "~3.5.3"
@@ -37,6 +36,7 @@
   },
   "dependencies": {
     "rimraf": "^3.0.0",
-    "copyfiles": "^2.1.1"
+    "copyfiles": "^2.1.1",
+    "lerna": "^3.16.4"
   }
 }
