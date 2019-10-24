@@ -12,7 +12,8 @@
     "lint": "eslint '*/**/*.{js,ts,tsx}'",
     "lint:fix": "eslint '*/**/*.{js,ts,tsx}' --fix",
     "e2e": "lerna run e2e --scope championship-client",
-    "e2e:ci": "lerna run e2e --scope championship-client -- --protractor-config=e2e/protractor-ci.conf.js"
+    "e2e:ci": "lerna run e2e --scope championship-client -- --protractor-config=e2e/protractor-ci.conf.js",
+    "postinstall": "lerna bootstrap"
   },
   "author": "",
   "license": "ISC",
