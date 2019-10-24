@@ -2,7 +2,7 @@
   "name": "championship-server",
   "version": "0.0.0",
   "scripts": {
-    "start": "node -r dotenv/config src",
+    "start": "node -r dotenv/config dist",
     "dev": "nodemon",
     "build": "tsc",
     "test": "echo ---- server part is not implemented yet -----",

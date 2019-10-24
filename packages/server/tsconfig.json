@@ -10,7 +10,7 @@
     "sourceMap": true,
     "allowJs": true,
     "experimentalDecorators": true,
-    "outDir": "../../dist/server"
+    "outDir": "dist"
     // "baseUrl": ".",
     // "paths": {
     //   "common/*": ["node_modules/common/dist/*"]

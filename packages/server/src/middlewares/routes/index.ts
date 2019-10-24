@@ -8,7 +8,7 @@ const router = new Router();
 router.use('/api', users.routes());
 router.get('*', async ctx => {
   ctx.response.set('Content-Type', 'text/html');
-  ctx.body = fs.readFileSync(path.resolve(__dirname, '..', '..', '..', '..', 'public', 'index.html'));
+  ctx.body = fs.readFileSync(path.resolve(__dirname, '..', '..', '..', '..', 'client', 'dist', 'index.html'));
 });
 
 export default router;

@@ -11,7 +11,7 @@ const app = new Koa();
 
 app.env = NODE_ENV;
 
-app.use(serve(path.resolve(__dirname, '..', '..', 'public')));
+app.use(serve(path.resolve(__dirname, '..', '..', 'client', 'dist')));
 app.use(bodyParser());
 app.use(router.routes());
 
