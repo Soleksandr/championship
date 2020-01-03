@@ -38,6 +38,7 @@ packages/client/speed-measure-plugin*.json
 **/npm-debug.log
 **/lerna-debug.log
 **/testem.log
+**/dist
 /typings
 
 # System Files
@@ -49,3 +50,6 @@ Thumbs.db
 
 # Server
 packages/server/temp
+
+# Common
+packages/common/dist

@@ -1,2 +1,5 @@
 **/node_modules
 **/*.conf.js
+dist/**
+**/dist
+dist

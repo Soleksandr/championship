@@ -8,10 +8,17 @@
     "removeComments": true,
     "preserveConstEnums": true,
     "sourceMap": true,
-    "experimentalDecorators": true
+    "allowJs": true,
+    "experimentalDecorators": true,
+    "outDir": "dist"
+    // "baseUrl": ".",
+    // "paths": {
+    //   "common/*": ["node_modules/common/dist/*"]
+    // }
   },
   "include": [
-    "**/*.ts"
+    "src/**/*.ts",
+    // "../common/**/*.ts"
   ],
   "exclude": [
     "../../node_modules",

@@ -15,10 +15,12 @@ import { MatInputModule } from '@angular/material/input';
 import { SignUpComponent } from './forms/sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HeaderComponent } from './header/header.component';
 import { SignInComponent } from './forms/sign-in/sign-in.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SignUpComponent, SignInComponent],
+  declarations: [AppComponent, HomeComponent, SignUpComponent, PageNotFoundComponent, HeaderComponent, SignInComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
