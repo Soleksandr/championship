@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,9 +15,10 @@ import { MatInputModule } from '@angular/material/input';
 import { SignUpComponent } from './forms/sign-up/sign-up.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { SignInComponent } from './forms/sign-in/sign-in.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, SignUpComponent],
+  declarations: [AppComponent, HomeComponent, SignUpComponent, SignInComponent],
   imports: [
     AppRoutingModule,
     BrowserModule,
@@ -29,6 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
     MatToolbarModule,
     MatInputModule,
     HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

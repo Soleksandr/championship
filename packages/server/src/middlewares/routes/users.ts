@@ -12,7 +12,7 @@ router
   .post('/', async ctx => {
     ctx.user;
     const email = await userManager.create(ctx.request.body);
-
+    console.log('========================================= ', email);
     ctx.body = { email };
   });
 
