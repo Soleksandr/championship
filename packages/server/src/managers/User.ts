@@ -2,6 +2,7 @@ import bcrypt from 'bcrypt';
 
 import db, { User, IUserData } from '../db';
 import { IUser } from 'common/models/User';
+import { _signToken } from '../services/token';
 
 export class UserManager {
   public async create(userData: IUserData): Promise<IUser['email']> {
@@ -9,10 +10,24 @@ export class UserManager {
 
     await db.user.persist(new User({ ...userData, password }));
 
-    return userData.email;
+    return _signToken(userData.email);
   }
 
-  // public login();
+  public async login({ email, password }: IUser): Promise<string> {
+    const user = await db.user.findOne({ email });
+
+    if (!user) {
+      throw new Error('Unknown email address');
+    }
+
+    const isValidPassword = await bcrypt.compare(password, user.password);
+
+    if (!isValidPassword) {
+      throw new Error('Wrong password');
+    }
+
+    return _signToken(user.email);
+  }
 
   private async hashPassword(password: string) {
     return bcrypt.hash(password, 10);

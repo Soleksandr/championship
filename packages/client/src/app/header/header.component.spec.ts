@@ -6,6 +6,8 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -14,7 +16,15 @@ describe('HeaderComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [HeaderComponent],
-      imports: [MatMenuModule, MatIconModule, MatButtonModule, MatTabsModule, MatToolbarModule],
+      imports: [
+        MatMenuModule,
+        MatIconModule,
+        MatButtonModule,
+        MatTabsModule,
+        MatToolbarModule,
+        HttpClientModule,
+        RouterModule.forRoot([]),
+      ],
     }).compileComponents();
   }));
 

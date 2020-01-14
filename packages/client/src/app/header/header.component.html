@@ -10,8 +10,9 @@
 
     <div>
       <mat-menu #appMenu="matMenu">
-        <a routerLink="/sign_in" mat-menu-item>Sign In</a>
-        <a routerLink="/sign_up" mat-menu-item>Sign Up</a>
+        <a *ngIf="!(userService.user$ | async)" routerLink="/sign_in" mat-menu-item>Sign In</a>
+        <a *ngIf="!(userService.user$ | async)" routerLink="/sign_up" mat-menu-item>Sign Up</a>
+        <a (click)="logout()" *ngIf="userService.user$ | async" routerLink="/" mat-menu-item>Log Out</a>
       </mat-menu>
 
       <button mat-icon-button [matMenuTriggerFor]="appMenu">

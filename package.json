@@ -35,8 +35,8 @@
     }
   },
   "dependencies": {
-    "rimraf": "^3.0.0",
     "copyfiles": "^2.1.1",
-    "lerna": "^3.16.4"
+    "lerna": "^3.16.4",
+    "rimraf": "^3.0.0"
   }
 }

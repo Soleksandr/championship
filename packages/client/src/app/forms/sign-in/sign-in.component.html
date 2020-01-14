@@ -1,14 +1,14 @@
-<form [formGroup]="signInForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="signInForm" (ngSubmit)="onSubmit()" #form="ngForm">
   <h1 class="mat-headline">Sign In</h1>
 
   <mat-form-field>
-    <input type="email" matInput placeholder="Email" name="email" formControlName="email">
-    <mat-hint id="email-validate" align="end" [hidden]="signInForm.controls.email.status">Required</mat-hint>
+    <input type="email" matInput placeholder="Email" name="email" formControlName="email" required>
+    <mat-hint *ngIf="signInForm.controls.email.errors && (signInForm.controls.email.touched || form.submitted)" id="email-validate" align="end">{{signInForm.controls.email.errors.email}}</mat-hint>
   </mat-form-field>
 
   <mat-form-field>
-    <input type="password" matInput placeholder="Password" name="password" formControlName="password">
-    <!-- <mat-hint id="email-validate" align="end" [hidden]="signInForm.email.valid || signInForm.email.untouched">Required</mat-hint> -->
+    <input type="password" matInput placeholder="Password" name="password" formControlName="password" required>
+    <mat-hint *ngIf="signInForm.controls.password.errors && (signInForm.controls.password.touched || form.submitted)" id="password-validate" align="end">{{signInForm.controls.password.errors.password}}</mat-hint>
   </mat-form-field>
 
   <button type="submit"  mat-flat-button	color="primary">submit</button>

@@ -9,11 +9,16 @@ router
     ctx.body = ['user'];
   })
 
-  .post('/', async ctx => {
+  .post('/sign_up', async ctx => {
     ctx.user;
-    const email = await userManager.create(ctx.request.body);
-    console.log('========================================= ', email);
-    ctx.body = { email };
+    const token = await userManager.create(ctx.request.body);
+    ctx.body = { token };
+  })
+
+  .post('/sign_in', async ctx => {
+    ctx.user;
+    const token = await userManager.login(ctx.request.body);
+    ctx.body = { token };
   });
 
 export default router;

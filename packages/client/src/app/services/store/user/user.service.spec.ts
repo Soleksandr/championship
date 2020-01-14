@@ -1,12 +1,15 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Router, RouterModule } from '@angular/router';
 
 import { UserService } from './user.service';
+import { PersisterService } from '../../persister/persister.service';
 
 describe('UserService', () => {
   beforeEach(() =>
     TestBed.configureTestingModule({
-      providers: [{ provide: HttpClient }],
+      imports: [HttpClientModule, RouterModule.forRoot([])],
+      providers: [{ provide: [Router, PersisterService] }],
     }),
   );
 

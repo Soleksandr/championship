@@ -2,12 +2,12 @@
     <h1 class="mat-headline">Sign Up</h1>
     <mat-form-field>
       <input type="email" #email=ngModel [(ngModel)]="user.email" matInput placeholder="Email" name="email" required>
-      <!-- <mat-hint id="email-validate" align="end" [hidden]="email.valid || email.untouched">Required</mat-hint> -->
+      <mat-hint id="email-validate" align="end" [hidden]="email.valid || email.untouched">Required</mat-hint>
     </mat-form-field>
 
     <mat-form-field>
       <input (blur)="onPassBlur()" type="password" #password=ngModel [(ngModel)]="user.password" matInput placeholder="Password" name="password" required>
-      <!-- <mat-hint id="password-validate" align="end" [hidden]="password.valid || password.untouched">Required</mat-hint> -->
+      <mat-hint id="password-validate" align="end" [hidden]="password.valid || password.untouched">Required</mat-hint>
     </mat-form-field>
 
     <mat-form-field>

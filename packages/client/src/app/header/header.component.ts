@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserService } from '../services/store/user/user.service';
 
 @Component({
   selector: 'app-header',
@@ -6,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss'],
 })
 export class HeaderComponent implements OnInit {
-  constructor() {}
+  logout() {
+    this.userService.logout();
+  }
+  constructor(private userService: UserService) {}
 
   ngOnInit() {}
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, FormBuilder } from '@angular/forms';
+import { FormBuilder, AbstractControl } from '@angular/forms';
+import { UserService } from '../../services/store/user/user.service';
 
 @Component({
   selector: 'app-sign-in',
@@ -7,20 +8,34 @@ import { Validators, FormBuilder } from '@angular/forms';
   styleUrls: ['./sign-in.component.scss'],
 })
 export class SignInComponent implements OnInit {
+  emilRegEx = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+  validateEmail = (control: AbstractControl) => {
+    if (!control.value) {
+      return { email: 'Email is required' };
+    }
+    if (!this.emilRegEx.test(control.value)) {
+      return { email: 'Invalid email' };
+    }
+    return null;
+  };
+
+  validatePassword = (control: AbstractControl) => {
+    if (!control.value) {
+      return { password: 'Password is required' };
+    }
+    return null;
+  };
+
   signInForm = this.fb.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', Validators.required],
+    email: ['', this.validateEmail],
+    password: ['', this.validatePassword],
   });
-  // signInForm = new FormGroup({
-  //   email: new FormControl(''),
-  //   password: new FormControl(''),
-  // });
 
   onSubmit() {
-    console.log('signInform ', this.signInForm);
-    console.warn(this.signInForm.value);
+    this.userService.login(this.signInForm.value);
   }
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private userService: UserService) {}
 
   ngOnInit() {}
 }
