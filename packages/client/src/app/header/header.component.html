@@ -1,4 +1,5 @@
-<mat-toolbar color="primary">
+<header>
+  <mat-toolbar class="toolbar" color="primary">
     <div>
       <a class="logo" routerLink="/">
         <mat-icon>emoji_events</mat-icon>
@@ -10,8 +11,17 @@
 
     <div>
       <mat-menu #appMenu="matMenu">
-        <a *ngIf="!(userService.user$ | async)" routerLink="/sign_in" mat-menu-item>Sign In</a>
-        <a *ngIf="!(userService.user$ | async)" routerLink="/sign_up" mat-menu-item>Sign Up</a>
+        <div *ngIf="(userService.user$ | async)">
+          <a routerLink="/new_championship" mat-menu-item>New Championship</a>
+          <a routerLink="/my_championships" mat-menu-item>My Championships</a>
+        </div>
+
+        <mat-divider *ngIf="(userService.user$ | async)"></mat-divider>
+
+        <div *ngIf="!(userService.user$ | async)">
+          <a routerLink="/sign_in" mat-menu-item>Sign In</a>
+          <a routerLink="/sign_up" mat-menu-item>Sign Up</a>
+        </div>
         <a (click)="logout()" *ngIf="userService.user$ | async" routerLink="/" mat-menu-item>Log Out</a>
       </mat-menu>
 
@@ -20,4 +30,5 @@
       </button>
     </div>
   </mat-toolbar>
+</header>
 

@@ -1,0 +1,37 @@
+form {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+
+  mat-hint {
+    color: red;
+  }
+
+  .form-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      margin: 0;
+    }
+  }
+
+  .add-team-btn {
+    display: flex;
+
+    button {
+      margin-left: auto;
+    }
+  }
+
+  .participant-team-field-container {
+    display: flex;
+    flex-direction: column;
+  }
+}

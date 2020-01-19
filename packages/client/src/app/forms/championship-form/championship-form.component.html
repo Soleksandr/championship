@@ -1,0 +1,35 @@
+
+<form [formGroup]="championshipForm" (ngSubmit)="onSubmit()" #form="ngForm">
+  <div class="form-header">
+    <h1 class="mat-headline">New Championship</h1>
+    <button type="submit"  mat-flat-button	color="primary">create</button>
+  </div>
+
+  <mat-form-field>
+    <input matInput placeholder="Championship Name" formControlName="championshipName" required>
+    <!-- <mat-hint *ngIf="championshipForm.controls.email.errors && (championshipForm.controls.email.touched || form.submitted)" id="email-validate" align="end">{{championshipForm.controls.email.errors.email}}</mat-hint> -->
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Type</mat-label>
+    <mat-select formControlName="championshipType">
+      <mat-option *ngFor="let championshipType of championshipTypes" [value]="championshipType.value">
+        {{championshipType.viewValue}}
+      </mat-option>
+    </mat-select>
+    <!-- <input matInput placeholder="Championship Type" formControlName="championshipType" required> -->
+    <!-- <mat-hint *ngIf="championshipForm.controls.password.errors && (championshipForm.controls.password.touched || form.submitted)" id="password-validate" align="end">{{championshipForm.controls.password.errors.password}}</mat-hint> -->
+  </mat-form-field>
+
+  <div class="add-team-btn">
+    <button mat-flat-button	color="primary">add participant / team</button>
+  </div>
+
+  <div class="participant-team-field-container" formArrayName="participantsTeams"
+    *ngFor="let item of championshipForm.get('participantsTeams').controls; let i = index;">
+    <mat-form-field [formGroupName]="i" >
+      <input matInput placeholder="Participant / Team" formControlName="name" required>
+      <!-- <mat-hint *ngIf="championshipForm.controls.password.errors && (championshipForm.controls.password.touched || form.submitted)" id="password-validate" align="end">{{championshipForm.controls.password.errors.password}}</mat-hint> -->
+    </mat-form-field>
+  </div>
+</form>
